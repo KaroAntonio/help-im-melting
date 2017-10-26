@@ -101,10 +101,6 @@ var load = function (object) {
 }
 
 
-//var texture = THREE.ImageUtils.loadTexture('../assets/textures/Metro01.JPG');
-//texture.wrapS = texture.wrapT = THREE.MirroredRepeatWrapping;
-//loader.load('../assets/models/city.obj', '../assets/models/city.mtl', load);
-//texture.repeat.set( 1 , 1);
 init_water();
 init_cubes();
 init_skybox();
@@ -114,7 +110,7 @@ init_fire();
 init_body();
 
 function init_fire() {
-	VolumetricFire.texturePath = '../assets/fire_textures/';
+	VolumetricFire.texturePath = 'assets/fire_textures/';
 
 	var fireWidth  = 2;
 	var fireHeight = 4;
@@ -273,7 +269,7 @@ function init_body () {
 	var loader = new THREE.OBJLoader();
 	//var material = new THREE.MeshBasicMaterial({color: 'yellow', side: THREE.DoubleSide});
 	var material = mirrorSphereMaterial
-	loader.load('../assets/model/MaleLow.obj',
+	loader.load('assets/model/MaleLow.obj',
 		function ( object ) { 
 			body = object;
 				object.traverse(function (child) {

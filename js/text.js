@@ -13,7 +13,7 @@ wrds = [
 	'very',
 	'melting.',
 	'this is',
-	'an message',
+	'a message',
 	'from a person',
 	'who is',
 	'currently melting.',
@@ -39,7 +39,6 @@ wrds = [
 	'the power',
 	'<a href="http://www.worldlandtrust.org/">BUY NOW</a>',
 ]
-
 
 console.log('draw text')
 
