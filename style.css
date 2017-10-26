@@ -21,8 +21,6 @@ a {
 	z-index: 1000000; /* the highest */
 }
 
-
-
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -31,4 +29,8 @@ a {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+
+div.hightlight :hover {
+	color:yellow;
 }
