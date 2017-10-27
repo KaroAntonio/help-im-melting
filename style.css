@@ -1,0 +1,36 @@
+body,html { margin: 0px; border: 0px; }
+
+body {
+	background: red;
+	background-size: cover;
+	background-repeat: no-repeat;
+	scrolling: no;
+	overflow: hidden;
+}
+
+a {
+	color: red;
+}
+
+#loading {
+	position: absolute;
+	right: 50vw;
+	top: 20vh;
+	width: 40px;
+	height: 40px;
+	z-index: 1000000; /* the highest */
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+div.hightlight :hover {
+	color:yellow;
+}
