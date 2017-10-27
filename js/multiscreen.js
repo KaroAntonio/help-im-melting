@@ -40,6 +40,7 @@ function init_multiscreen() {
 		prompt.remove();		
 		//resize_and_position(n_rows, n_cols, pos);
 		draw_text();
+		$('#audio')[0].play();
 		run_three_scene(n_rows, n_cols, pos);
 	});
 	prompt.children().css({width: width-200});

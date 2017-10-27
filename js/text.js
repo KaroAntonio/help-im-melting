@@ -1,10 +1,11 @@
+
 // overlay words on top of what there ur seeing there buddy
 
 function draw_text() {
 
 var idx = 0;
-var pay_button = $('<div>PAY $$$ TO STOP MELTING</div>');
-var ignore_button = $('<div class="highlight">IGNORE, U SLY FOX</div>');
+var pay_button = $('<div>PAY 4 COOLNESS</div>');
+var ignore_button = $('<div class="highlight">DISTRACT URSELF</div>');
 
 wrds = [
 	'oi vey.',
@@ -21,13 +22,13 @@ wrds = [
 	'who is',
 	'currently melting:',
 	'im like a',
-	'kraft singles slice',
+	'cheese slice',
 	'on a windshield.',
-	'Aka not sexy.',
+	"It's not sexy.",
 	'Please',
 	'give me',
 	'ur coolness.',
-	'I want',
+	'I just want',
 	'to be frosty', 
 	'like youuuu.',
 	'Please dont',
@@ -37,7 +38,30 @@ wrds = [
 	'hate that',
 	':(',
 	'Ur like,',
-	'my hero',
+	'my hero.',
+	'I want things',
+	'like',
+	'frappucinos',
+	'and McShakes',
+	'and froyo',
+	'and cold hands.',
+	"that's cool,",
+	'right?',
+	"am i allowed?",
+	'I want to',
+	'hold hands',
+	'with cool ppl.',
+	'I want',
+	'icey stares',
+	'and',
+	'leather jackets.',
+	"i want coolness.",
+	"But I'm",
+	"too warm,",
+	"I'm tepid.",
+	"ewwwww.",
+	'No one likes',
+	'a tepid glacier.',
 ]
 
 console.log('draw text')
@@ -52,10 +76,11 @@ overlay_text.appendTo(overlay);
 overlay.appendTo('body');
 
 overlay.css({
+	cursor: 'pointer',
 	textAlign: 'center',
 	position:'fixed',
 	zIndex: 1000,
-	fontSize:110,
+	fontSize:120,
 	color: 'red',
 	width: window.innerWidth,
 	height: window.innerHeight,
@@ -94,7 +119,8 @@ pay_button.click(function() {
 	window.location.replace("http://www.worldlandtrust.org/projects/buy-acre");
 });
 
-ignore_button.click(function() {
+ignore_button.click(function(e) {
+	console.log(e)
 	place_distraction();
 });
 
@@ -102,14 +128,14 @@ overlay.append(pay_button);
 overlay.append(ignore_button);
 
 pay_button.css({
-	fontSize:40,
+	fontSize:20,
 	position:'fixed',
 	bottom: 100,
 	left: 100	
 });
 
 ignore_button.css({
-	fontSize:40,
+	fontSize:20,
 	position:'fixed',
 	bottom: 100,
 	right: 100	
@@ -121,11 +147,10 @@ function place_distraction() {
 	new_distract.attr('src','assets/'+dist_urls[Math.floor(Math.random() * dist_urls.length)]+'.gif');
 	new_distract.css({
 		position: 'fixed',
-		left: Math.random()*(window.innerWidth),
-		top: Math.random()*(window.innerHeight),
+		left: Math.random()*(window.innerWidth-100),
+		top: Math.random()*(window.innerHeight-100),
 	});
 	$('body').append(new_distract);
 }
-
 }
 
